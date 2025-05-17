@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div className='w-[100dvw] h-[100dvh] bg-[#e9ecef]'>
+      <div className='w-[100dvw] h-[100dvh] bg-[#e9ecef] flex flex-col items-center'>
         <Header />
         <Main />
       </div>

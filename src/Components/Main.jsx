@@ -13,7 +13,7 @@ function Main() {
         setIngredients((prev)=>[...prev,newIngredient])
     }
   return (
-    <main>
+    <main className='max-w-[30rem]'>
         <form
         action={addIngredients}
         className='h-[2.2rem] w-full mt-10 my-7 px-[3rem] flex justify-center items-center gap-3'
