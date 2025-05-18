@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 function Main() {
-    const [ingredients,setIngredients]=useState(["Salt", "Onion", "Garlic", "Oil", "Tomato"]
+    const [ingredients,setIngredients]=useState(["Salt", "Onion", "Garlic", "Oil"]
 )
     const showIncredients = ingredients.map((items)=>{
         return (
@@ -13,7 +13,7 @@ function Main() {
         setIngredients((prev)=>[...prev,newIngredient])
     }
   return (
-    <main className='max-w-[30rem]'>
+    <main className='max-w-[30rem] mt-[4rem]'>
         <form
         action={addIngredients}
         className='h-[2.2rem] w-full mt-10 my-7 px-[3rem] flex justify-center items-center gap-3'

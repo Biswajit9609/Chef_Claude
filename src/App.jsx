@@ -5,8 +5,9 @@ function App() {
 
   return (
     <>
-      <div className='w-[100dvw] h-[100dvh] bg-[#e9ecef] flex flex-col items-center'>
-        <Header />
+      <div className='max-w-[100dvw] h-[100dvh] flex flex-col'>
+        <Header className="fixed" />
+        <Main />
         <Main />
       </div>
     </>
