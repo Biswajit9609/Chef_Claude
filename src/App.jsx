@@ -8,7 +8,6 @@ function App() {
       <div className='max-w-[100dvw] h-[100dvh] flex flex-col'>
         <Header className="fixed" />
         <Main />
-        <Main />
       </div>
     </>
   )
