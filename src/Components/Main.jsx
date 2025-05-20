@@ -4,7 +4,7 @@ import IngredientsList from './IngredientsList';
 import Responce from './Responce';
 
 function Main() {
-    const [ingredients, setIngredients] = useState([]);
+    const [ingredients, setIngredients] = useState(["All the spices","salt"]);
     const [responceShown, setResponceShown] = useState(false);
     const [recipeText, setRecipeText] = useState('');
     function addIngredients(formData) {
