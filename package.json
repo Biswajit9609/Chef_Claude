@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@huggingface/inference": "^3.13.1",
     "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
