@@ -38,7 +38,7 @@ async function handleToggle() {
 }
 
   return (
-    <main className='w-full mt-[4rem]'>
+    <main className='w-full mt-[4rem] flex justify-evenly flex-wrap'>
       <section className='max-w-[30rem]'>
         <form
           action={addIngredients}
@@ -61,10 +61,11 @@ async function handleToggle() {
           />
         }
       </section>
-
-      {responceShown &&
+      <section className="mb-10 m-5">
+        {responceShown &&
         <Responce recipeText={recipeText} />
       }
+      </section>
     </main>
   );
 }
