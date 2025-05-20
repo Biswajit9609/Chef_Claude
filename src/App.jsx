@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div className='max-w-[100dvw] h-[100dvh] flex flex-col'>
+      <div className='max-w-[100dvw] w-[100dvw] h-[100dvh] flex flex-col'>
         <Header className="fixed" />
         <Main />
       </div>
