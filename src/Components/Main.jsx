@@ -38,19 +38,23 @@ async function handleToggle() {
 }
 
   return (
-    <main className='w-full mt-[4rem] flex justify-evenly flex-wrap'>
-      <section className='max-w-[30rem]'>
+    <main className='max-w-[100dvw] w-[100%] mt-[4rem] flex justify-evenly flex-wrap overflow-x-hidden'>
+      <section className='max-w-[30rem] w-full'>
         <form
           action={addIngredients}
-          className='h-[2.2rem] w-full mt-10 my-7 px-[3rem] flex justify-center items-center gap-3'
+          className='h-[2.3rem] w-full mt-10 my-7 flex justify-center items-center gap-3'
         >
-          <input
-            className='bg-white h-full flex grow-[1] w-[180px] sm:max-w-[20rem] sm:min-w[200px] border-2 border-[#ced4da] rounded-[0.3rem] px-2'
-            placeholder='e.g. Bread'
-            type="text"
-            name="hello"
-          />
-          <button className='button h-[95%] flex justify-center items-center bg-black text-white text-[0.75rem] px-[0.9rem] rounded-[0.2rem] border-none font-semibold'>+ Add ingredient</button>
+          <div className="h-full flex justify-center items-center w-[80%] gap-5">
+              <input
+                  className='bg-white h-full flex grow-[1] w-[170px] sm:max-w-[20rem] sm:min-w[200px] border-2 border-[#ced4da] rounded-[0.3rem] px-2'
+                  placeholder='e.g. Bread'
+                  type="text"
+                  name="hello"
+              />
+              <button 
+                  className='button h-[95%] flex justify-center items-center bg-black text-white text-[0.75rem] px-[0.9rem] rounded-[0.2rem] border-none font-semibold'>+ Add ingredient</button>
+          </div>
+          
         </form>
 
         {ingredients.length > 0 &&
