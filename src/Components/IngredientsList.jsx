@@ -2,7 +2,7 @@ import React from 'react'
 
 function IngredientsList(props) {
   return (
-    <section className='flex flex-wrap justify-center items-center'>
+    <section className='flex flex-wrap justify-center items-center md:mb-15'>
             <h1 className='font-semibold text-[1.8rem] mx-8'>Ingredients on hand:</h1>
             <ul  className='list-disc list-inside w-full mt-5' >
                 {props.showIncredients}
