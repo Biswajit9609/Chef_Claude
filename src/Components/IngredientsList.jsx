@@ -1,28 +1,21 @@
-import React from 'react';
+import React from 'react'
 
 function IngredientsList(props) {
   return (
-    <section className='bg-white rounded-lg shadow-md p-6 mb-6'>
-      <h1 className='font-semibold text-2xl text-center text-indigo-600'>Ingredients on hand:</h1>
-      <ul className='list-disc list-inside mt-4 text-gray-700'>
-        {props.showIngredients}
-      </ul>
-      {props.ingredients.length > 3 && (
-        <div className='getRecipe mt-6 bg-indigo-100 p-4 rounded flex items-center justify-between'>
-          <div>
-            <h2 className='font-semibold text-lg mb-1 text-indigo-800'>Ready for a recipe?</h2>
-            <p className='text-sm text-indigo-700'>Generate a recipe from your list of ingredients.</p>
-          </div>
-          <button
-            className='bg-indigo-600 text-white font-bold px-4 py-2 rounded hover:bg-indigo-700 transition duration-200'
-            onClick={props.handleToggle}
-          >
-            Get a recipe
-          </button>
-        </div>
-      )}
-    </section>
-  );
+    <section className='flex flex-wrap justify-center items-center md:mb-15'>
+            <h1 className='font-semibold text-[1.8rem] mx-8'>Ingredients on hand:</h1>
+            <ul  className='list-disc list-inside w-full mt-5' >
+                {props.showIncredients}
+            </ul>
+            {(props.ingredients.length>3) ? <div className='getRecipe h-25 px-5 py-0 my-10 mx-5 rounded-[0.5rem] bg-[#F0EFEB] flex items-center gap-3'>
+                <div className='w-[60%]'>
+                    <h2 className='font-semibold text-[1rem] mb-1'>Ready for a recipe?</h2>
+                    <p className='text-[0.7rem] w-[85%]'>Generate a recipe from your list of ingredients.</p>
+                </div>
+                <button className='flex text-[0.8rem] text-white font-bold px-3 py-2 bg-[#D17557] rounded-[0.3rem]' onClick={props.handleToggle}>Get a recipe</button>
+            </div>:null}
+        </section>
+  )
 }
 
-export default IngredientsList;
+export default IngredientsList
