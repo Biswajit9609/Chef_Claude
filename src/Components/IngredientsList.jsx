@@ -1,21 +1,26 @@
-import React from 'react'
-
-function IngredientsList(props) {
-  return (
-    <section className='flex flex-wrap justify-center items-center md:mb-15'>
-            <h1 className='font-semibold text-[1.8rem] mx-8'>Ingredients on hand:</h1>
-            <ul  className='list-disc list-inside w-full mt-5' >
-                {props.showIncredients}
+function IngredientsList({ showIncredients, ingredients, handleToggle }) {
+    return (
+        <div className='bg-[#1a1a1a] p-6 rounded-lg shadow-md'>
+            <h1 className='text-2xl font-semibold mb-4'>Ingredients on hand</h1>
+            <ul className='list-disc list-inside space-y-1 mb-6'>
+                {showIncredients}
             </ul>
-            {(props.ingredients.length>3) ? <div className='getRecipe h-25 px-5 py-0 my-10 mx-5 rounded-[0.5rem] bg-[#F0EFEB] flex items-center gap-3'>
-                <div className='w-[60%]'>
-                    <h2 className='font-semibold text-[1rem] mb-1'>Ready for a recipe?</h2>
-                    <p className='text-[0.7rem] w-[85%]'>Generate a recipe from your list of ingredients.</p>
+            {ingredients.length > 3 && (
+                <div className='flex justify-between items-center bg-[#262626] p-4 rounded-md'>
+                    <div>
+                        <h2 className='font-semibold text-lg'>Ready for a recipe?</h2>
+                        <p className='text-sm text-gray-400'>Generate a recipe using your ingredients.</p>
+                    </div>
+                    <button
+                        className='bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md font-bold'
+                        onClick={handleToggle}
+                    >
+                        Get Recipe
+                    </button>
                 </div>
-                <button className='flex text-[0.8rem] text-white font-bold px-3 py-2 bg-[#D17557] rounded-[0.3rem]' onClick={props.handleToggle}>Get a recipe</button>
-            </div>:null}
-        </section>
-  )
+            )}
+        </div>
+    );
 }
 
-export default IngredientsList
+export default IngredientsList;
